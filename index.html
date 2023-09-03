@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- main-style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- shortcut icon -->
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <!-- bootstrap-style -->
+    <link rel="stylesheet" href="./all.min.css">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <!-- Add jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Add Bootstrap JS library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Add Font Awesome -->
+    <script src="https://kit.fontawesome.com/7b1ed940ec.js" crossorigin="anonymous"></script>
+    <title>Yummy1</title>
+</head>
+<body>
+<!-- loader -->
+    <div id='loader' class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+<!-- end loader -->
+
+<!-- nav and footer -->
+    <div class="side-nav-menu min-vh-100 position-fixed d-flex top-0">
+        <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-4">
+            <div class="links">
+                <ul class="list-unstyled overflow-hidden">
+                    <a class="ankorSearch" href="search.html" target="_blank"><li onclick=" closeSideNav()" class="py-2 position-relative cursor-pointer">Search</li></a>
+                    <a class="ankorSearch" href="categories.html"  target="_blank"><li onclick="closeSideNav()" class="py-2 position-relative cursor-pointer">Categories</li></a>
+                    <a class="ankorSearch" href="areas.html" target="_blank"><li onclick=" closeSideNav()" class="py-2 position-relative cursor-pointer">Area</li></a>
+                    <a class="ankorSearch" href="ingredients.html" target="_blank"><li onclick=" closeSideNav()" class="py-2 position-relative cursor-pointer">Ingredients</li></a>
+                    <a class="ankorSearch" href="./contactus/index.html" target="_blank"><li onclick=" closeSideNav()" class="py-2 position-relative cursor-pointer">Contact Us</li></a>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer">
+                    <p>Mohamed Ghazy  C41<br>Route.</p>
+                </div>
+            </div>
+        </div>
+        <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+            <img class="logo" src="./images/logo.png" alt="" srcset="">
+            <i class="fa-solid open-close-icon fa-align-justify fa-2x"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+<!-- end nav and footer -->
+
+<!-- meals -->
+    <div id="meals-container" class="container w-100">
+        <div class="row gy-5 position-relative" id="row">
+        </div>
+    </div>
+<!-- end meals -->
+
+
+<!-- displaying the detalis of meal -->
+
+<div class="modal fade" id="mealModal" tabindex="-1" aria-labelledby="mealModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mealModalLabel">Meal Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="mealDetails">
+            <!-- Meal details will be displayed here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- end displaying the detalis of meal -->
+    <script src="yummy.js"></script>
+</body>
+</html>
